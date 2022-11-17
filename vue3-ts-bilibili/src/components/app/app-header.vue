@@ -9,7 +9,7 @@
       <i class="iconfont ic_search_tab"></i>
     </a>
     <!-- 头像 -->
-    <a class="face" href="#">
+    <a class="face" href="#/login">
       <img src="@/assets/images/login.png" />
     </a>
     <!-- 下载按钮 -->

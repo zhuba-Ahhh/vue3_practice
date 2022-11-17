@@ -12,17 +12,20 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
-import { Toast } from "vant";
-
+import { useRouter } from "vue-router";
+const router = useRouter();
 const value = ref("");
-const onSearch = (val: string | undefined) => Toast(val);
-const onCancel = () => Toast("取消");
+const onSearch = (val: string | undefined) => console.log(val);
+const onCancel = () => {
+  router.push("/");
+};
 const Search = defineProps({
   val: {
     type: String,
     default: "",
   },
 });
+console.log("s", Search.val);
 </script>
 
 <style scoped>

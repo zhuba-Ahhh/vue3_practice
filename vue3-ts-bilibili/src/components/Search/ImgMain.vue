@@ -16,7 +16,6 @@ const Search = defineProps({
     default: false,
   },
 });
-console.log(Search.show);
 </script>
 
 <style lang="less" scoped>
