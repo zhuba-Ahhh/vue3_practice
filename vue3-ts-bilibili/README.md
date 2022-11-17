@@ -1,4 +1,4 @@
-# vue3-ts-bilibili
+# biu
 
 ## Run Project
 
@@ -10,4 +10,4 @@ npm run build
 
 ## 技术栈
 
-**Vue3 + Ts + Vant3 + Axios + mockjs**
+Vue3 + Ts + Vant3 + Axios + mockjs

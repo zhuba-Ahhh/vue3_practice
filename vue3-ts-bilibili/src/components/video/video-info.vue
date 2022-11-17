@@ -20,27 +20,28 @@
 </template>
 
 <script lang="ts" setup>
-import { defineProps, PropType } from 'vue'
+import { defineProps } from "vue";
+import type { PropType } from "vue";
 
 interface IVideoInfo {
-  author?: string
-  authorIconSrc?: string
-  commentCount?: number
-  date?: string
-  id?: string
-  poster?: string
-  playCount?: string
-  likeCount?: string
-  favCount?: string
-  videoSrc?: string
-  videoTitle?: string
+  author?: string;
+  authorIconSrc?: string;
+  commentCount?: number;
+  date?: string;
+  id?: string;
+  poster?: string;
+  playCount?: string;
+  likeCount?: string;
+  favCount?: string;
+  videoSrc?: string;
+  videoTitle?: string;
 }
 defineProps({
   videoInfo: {
     type: Object as PropType<IVideoInfo>,
-    required: true
-  }
-})
+    required: true,
+  },
+});
 </script>
 
 <style lang="less" scoped>
@@ -66,7 +67,7 @@ defineProps({
         border-radius: 50%;
         overflow: hidden;
         margin: 0 1vw;
-        background: url(~@/assets/images/loading.png) no-repeat center #e7e7e7;
+        background: url(@/assets/images/loading.png) no-repeat center #e7e7e7;
       }
 
       .author-name {

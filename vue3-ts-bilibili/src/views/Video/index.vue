@@ -68,7 +68,7 @@ axios({
         border-radius: 50%;
         overflow: hidden;
         margin: 0 1vw;
-        background: url(~@/assets/images/loading.png) no-repeat center #e7e7e7;
+        background: url(@/assets/images/loading.png) no-repeat center #e7e7e7;
       }
 
       .author-name {

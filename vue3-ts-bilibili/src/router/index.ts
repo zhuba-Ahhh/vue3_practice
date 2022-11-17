@@ -1,6 +1,6 @@
-import { createRouter, createWebHashHistory, RouteRecordRaw } from "vue-router";
+import { createRouter, createWebHashHistory } from "vue-router";
 
-const routes: Array<RouteRecordRaw> = [
+const routes = [
   {
     path: "/",
     component: () => import("@/views/Home/index.vue"),
@@ -8,6 +8,14 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: "/video/:id",
     component: () => import("@/views/Video/index.vue"),
+  },
+  {
+    path: "/login",
+    component: () => import("@/views/Login/index.vue"),
+  },
+  {
+    path: "/search",
+    component: () => import("@/views/Search/index.vue"),
   },
 ];
 const router = createRouter({

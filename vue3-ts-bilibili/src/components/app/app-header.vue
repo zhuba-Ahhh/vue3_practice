@@ -5,7 +5,7 @@
       <i class="iconfont Navbar_logo"></i>
     </a>
     <!-- 搜索 -->
-    <a class="search" href="#">
+    <a class="search" href="#/search">
       <i class="iconfont ic_search_tab"></i>
     </a>
     <!-- 头像 -->
