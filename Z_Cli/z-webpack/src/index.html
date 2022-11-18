@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>index</title>
+</head>
+
+<body>
+  <script>
+    (function (list) {// bundle.js
+      function require(file) {
+        let exports = {};
+        (function (exports, code) {
+          eval(code);
+        })(exports, list[file]);
+        return exports;
+      }
+      // 入口
+      require('index.js');
+    })({
+      'add.js': `exports.default = function (a, b) {return a + b}`,
+      'index.js': `
+        const add = require("add.js").default;
+        console.log("z-webpack ...",add(2, 4));
+      `
+    });
+    // 应该使用自运行函数 匿名函数自运行
+    const exports = {};
+    (function (exports, code) {
+      eval(code);
+    })(exports, "exports.default = function (a, b) {return a + b}")
+    console.log("z-webpack ...", exports.default(1, 2));
+    // 怎么使用CommonJS？ 直接模拟require
+    const list = {
+      'add.js': `exports.default = function (a, b) {return a + b}`,
+      'index.js': `
+        const add = require("add.js").default;
+        console.log(add(2, 4));
+      `
+    }
+    // const add = require("./add.js").default;
+    // console.log(add(1, 7));
+  </script>
+</body>
+
+</html>
