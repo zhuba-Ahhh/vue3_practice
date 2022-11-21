@@ -6,10 +6,26 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style>
+    div {
+      font-size: 20px;
+      margin: 200px;
+      border: 10px aqua;
+    }
+  </style>
 </head>
 
 <body>
   <script type="module" src="./index.js"></script>
+  <button id="add">state++</button>
+  <div id="app"></div>
+
+  <script>
+    document.getElementById("add").addEventListener("click", () => state.count++);
+    // function add() {
+    //   state.count++;
+    // }
+  </script>
 </body>
 
 </html>

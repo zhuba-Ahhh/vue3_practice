@@ -92,7 +92,7 @@ function getDep(target, key) {
 export function reactive(raw) {
   return new Proxy(raw, {
     get(target, key) {
-      console.log("target:", target, "key:", key);
+      // console.log("target:", target, "key:", key);
 
       // key -- dep 一一对应
       // dep存储在
