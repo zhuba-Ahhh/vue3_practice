@@ -9,6 +9,8 @@ Vue3 + Ts...的一些练习和一些轮子
 
 - **vue3-ts-bilibili**
 
+- **vue3_ts_component**
+
 
 
 - **mini_vue3**
