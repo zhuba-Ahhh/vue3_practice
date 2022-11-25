@@ -1,0 +1,138 @@
+// 主题配置
+$base: #606266 !default;
+$primary: #409eff !default;
+$success: #00d100 !default;
+$warning: #e6a23c !default;
+$danger: #f56c6c !default;
+$basis: #fff !default;
+
+$button-round: 100px !default;
+$button-loading: 2s !default;
+$button-height: 1px !default;
+
+.img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*  禁用按钮*/
+.z_button[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/*  不显示 */
+.no {
+  background-color: $basis;
+  border-color: $basis;
+  color: #ffffff !important;
+}
+
+.z_button {
+  padding: 0 20px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: $base;
+  border-radius: 4px;
+  background-color: $basis;
+  font-size: 14 * $button-height;
+  color: $base;
+  height: 40 * $button-height;
+  :hover {
+    opacity: 0.5;
+    border: transparent;
+  }
+}
+
+.z_button_large {
+  height: 48 * $button-height;
+  font-size: 15 * $button-height;
+}
+.z_button_middle {
+  // 默认为middle
+  height: 40 * $button-height;
+  font-size: 14 * $button-height;
+}
+.z_button_small {
+  padding: 0 18px;
+  height: 36 * $button-height;
+  font-size: 12 * $button-height;
+}
+.z_button_mini {
+  padding: 0 16px;
+  height: 32 * $button-height;
+  font-size: 10 * $button-height;
+}
+
+.z_button_primary {
+  background-color: $primary;
+  border-color: $primary;
+  color: $basis;
+  &.is_border {
+    background-color: transparent;
+    color: $primary;
+  }
+}
+
+.z_button_success {
+  background-color: $success;
+  border-color: $success;
+  color: $basis;
+  &.is_border {
+    background-color: transparent;
+    color: $success;
+  }
+}
+
+.z_button_warning {
+  background-color: $warning;
+  border-color: $warning;
+  color: $basis;
+  &.is_border {
+    background-color: transparent;
+    color: $warning;
+  }
+}
+
+.z_button_danger {
+  background-color: $danger;
+  border-color: $danger;
+  color: $basis;
+  &.is_border {
+    background-color: transparent;
+    color: $danger;
+  }
+}
+
+/**  圆角 **/
+.is_round {
+  border-radius: $button-round;
+}
+
+/**  块级按钮 **/
+.z_button_block {
+  display: block;
+  width: 99%;
+}
+
+/* 加载动画 */
+.loading {
+  animation: loading $button-loading infinite linear;
+}
+@-webkit-keyframes loading {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes loading {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}

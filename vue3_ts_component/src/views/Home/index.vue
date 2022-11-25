@@ -60,7 +60,11 @@
     <z_button type="danger" border="Border" src="@/assets/images/xingxing.png">
       收藏
     </z_button>
-    <z_button loading="loading">加载ing</z_button>
+    <z_button :beforeChange="asyncFunction">按钮</z_button>
+    <z_button :loading="!loading">加载ing</z_button>
+    <z_button :loading="Loading" @click="change()">
+      {{ Loading ? "加载ing" : "点击动画" }}
+    </z_button>
   </div>
   <div>
     块级按钮：
@@ -73,15 +77,34 @@
 
 <script setup lang="ts">
 import z_button from "@/components/Button/index.vue";
+import { ref, type Ref } from "vue";
 // const types = ["primary", "success", "warning", "danger"];
-let Border: boolean = true,
-  Round: boolean = true,
-  Disabled: boolean | String = "disabled", // true 也可以
+
+// 属性 数据
+let Border: boolean | string = true,
+  Round: boolean | string = true,
+  Disabled: boolean | string = "disabled", // true 也可以
   size: string = "large",
   MinWidth: string = "200px",
-  Src = "@/assets/images/daohang.png",
-  block = true,
-  loading = true;
+  Src: string = "@/assets/images/daohang.png",
+  block: boolean | string = true,
+  loading: boolean | string = false;
+
+let Loading = ref(loading);
+
+// 事件回调
+let change: Function = () => {
+  Loading.value = true;
+  setTimeout(() => {
+    console.log(3000 + "ms");
+  }, 3000);
+};
+
+let asyncFunction: Function = () => {
+  return new Promise<Boolean>((resolve, reject): any => {
+    resolve(true);
+  });
+};
 </script>
 
 <style scoped lang="scss">
