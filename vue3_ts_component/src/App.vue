@@ -1,8 +1,12 @@
 <script setup lang="ts">
-import Home from "@/views/Home/index.vue";
-import "@/components/scssconfig.scss";
+import { RouterView } from "vue-router";
 </script>
 
 <template>
-  <Home></Home>
+  <div id="to">
+    <router-link to="/">Home</router-link>
+    <router-link to="/button">Button</router-link>
+    <router-link to="/table">Table</router-link>
+  </div>
+  <router-view />
 </template>
