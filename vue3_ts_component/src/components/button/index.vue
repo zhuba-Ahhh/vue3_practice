@@ -57,11 +57,6 @@ img {
   justify-content: center;
   align-items: center;
 }
-.button {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
 
 /*  禁用按钮*/
 .z_button[disabled] {
@@ -80,12 +75,16 @@ img {
   padding: 0 20px;
   border-width: 1px;
   border-style: solid;
-  border-style: #dcdfe6;
+  border-color: #606266;
   border-radius: 4px;
   background-color: #fff;
   font-size: 14px;
   color: #606266;
   height: 40px;
+  :hover {
+    opacity: 0.5;
+    border: transparent;
+  }
 }
 
 .z_button_large {
@@ -163,6 +162,14 @@ img {
   animation: loading 2s infinite linear;
 }
 @-webkit-keyframes loading {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes loading {
   0% {
     -webkit-transform: rotate(0deg);
   }

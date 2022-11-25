@@ -72,7 +72,7 @@
 </template>
 
 <script setup lang="ts">
-import z_button from "@/components/button/index.vue";
+import z_button from "@/components/Button/index.vue";
 // const types = ["primary", "success", "warning", "danger"];
 let Border: boolean = true,
   Round: boolean = true,
