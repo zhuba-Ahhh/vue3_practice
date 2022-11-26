@@ -1,10 +1,10 @@
 import {defineComponent} from "vue";
 import {WidgetList} from "../../store/widgets";
-import {Widget} from "../../store/types";
+// import {Widget} from "../../store/types";
 
 export default defineComponent({
   name: 'Aside',
-  setup(props) {
+  setup() {
     const handleDragstart = (index: number, event: DragEvent) => {
       event.dataTransfer?.setData('index', index.toString());
     }

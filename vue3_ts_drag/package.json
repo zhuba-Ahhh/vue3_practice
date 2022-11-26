@@ -1,5 +1,5 @@
 {
-  "name": "vue-next-drag-demo",
+  "name": "vue3_ts_drag",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -32,5 +32,9 @@
     "typescript": "~3.9.3",
     "vue-cli-plugin-element-plus": "0.0.9"
   },
-  "homepage": "https://lycHub.github.io/vue-next-drag"
+  "homepage": "https://lycHub.github.io/vue-next-drag",
+  "description": "## Technology stack",
+  "main": "babel.config.js",
+  "author": "zhuba",
+  "license": "ISC"
 }

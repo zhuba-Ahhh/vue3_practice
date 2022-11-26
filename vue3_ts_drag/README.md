@@ -1,5 +1,9 @@
 # vue-next-drag-demo
 
+## Technology stack
+
+Vue3.0 + Ts/Tsx + Vuex + Scss
+
 ## Project setup
 
 ```
