@@ -4,6 +4,10 @@
   justify-content: center;
   a {
     margin: 4px 20px 0px 20px;
+    span {
+      border-left: 1px solid black;
+      padding-left: 10px;
+    };
     &:visited {
       color: aqua;
     }

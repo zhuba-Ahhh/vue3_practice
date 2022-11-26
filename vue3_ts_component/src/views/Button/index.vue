@@ -189,7 +189,7 @@ button {
 
 <script setup lang="ts">
 import z_button from "@/components/Button/index.vue";
-import { ref, type Ref } from "vue";
+import { ref } from "vue";
 // const types = ["primary", "success", "warning", "danger"];
 
 // 属性 数据

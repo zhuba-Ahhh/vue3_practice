@@ -4,6 +4,9 @@
   <div id="toHome">
     <router-link to="/button">Button</router-link>
     <router-link to="/table">Table</router-link>
+    <router-link to="/form">Form</router-link>
+    <router-link to="/select">Select</router-link>
+    <router-link to="/control">Control</router-link>
   </div>
 </template>
 

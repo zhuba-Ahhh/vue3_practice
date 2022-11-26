@@ -1,0 +1,19 @@
+.Control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction:row-reverse;
+  > div {
+    margin: 10px;
+    padding: 5px;
+  }
+}
+
+.switch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  div {
+    margin: 0px 5px;
+  }
+}

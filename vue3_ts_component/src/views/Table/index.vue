@@ -1,7 +1,11 @@
 <template>
   <div>Table</div>
   <hr />
-  <Table :colum="colum" :checkBox="checkBox" :checkIndex="checkIndex"></Table>
+  <Table :colum="colum" :checkBox="checkBox" :checkIndex="checkIndex">
+    <template v-slot:operation>
+      <el-button>编辑</el-button>
+    </template>
+  </Table>
 </template>
 
 <script setup lang="ts">
@@ -13,6 +17,7 @@ type Colum = {
   width?: string;
   type?: string;
   callBack?: Function;
+  slot_name?: string;
 };
 
 const checkBox: boolean = false; // true: 每一行前加选项框 默认：false
@@ -26,12 +31,19 @@ const colum: Array<Colum> = [
   {
     label: "Link",
     prop: "name",
-    width: "400",
+    width: "200",
     type: "function",
     callBack: (data: any, index: number) => {
       console.log();
       return `<a href="https://www.zhuba.cloud/">${index + ":" + data}</a>`;
     },
+  },
+  {
+    label: "Operation",
+    prop: "operation",
+    width: "200",
+    type: "slot",
+    slot_name: "operation",
   },
 ];
 </script>
