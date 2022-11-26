@@ -4,21 +4,79 @@
     style="width: 100%"
     :row-class-name="tableRowClassName"
   >
-    <el-table-column prop="date" label="Date" width="180" />
-    <el-table-column prop="name" label="Name" width="180" />
-    <el-table-column prop="address" label="Address" />
+    <el-table-column
+      v-if="checkBox"
+      type="selection"
+      width="55"
+    ></el-table-column>
+    <el-table-column v-if="checkIndex" type="index"></el-table-column>
+    <template v-for="(item, index) in colum">
+      <el-table-column
+        v-if="item.type === 'function'"
+        :label="item.label"
+        :prop="item.prop"
+        :width="item.width"
+        :key="index"
+      >
+        <div
+          slot-scope="scope"
+          v-html="
+            item.callBack && item.callBack(tableData[index - 1].name, index)
+          "
+        ></div>
+        <!-- <template slot-scope="scope">
+          <div v-html="item.callBack && item.callBack()"></div>
+        </template> -->
+      </el-table-column>
+      <el-table-column
+        v-else
+        :prop="item.prop"
+        :label="item.label"
+        :width="item.width"
+      >
+      </el-table-column>
+    </template>
   </el-table>
 </template>
 
 <script setup lang="ts">
+// import type { PropType } from "vue";
 // import "element-plus/dist/index.css";
 import "./table.scss";
 
 interface User {
-  date: string;
+  date?: string;
   name: string;
-  address: string;
+  address?: string;
+  sex?: string;
+  link?: string;
 }
+
+type Colum = {
+  prop?: string;
+  label?: string;
+  width?: string;
+  link?: string;
+  type?: string;
+  callBack?: Function;
+};
+
+defineProps({
+  colum: {
+    type: Array<Colum>,
+    default: [],
+  },
+  checkBox: {
+    type: Boolean,
+    default: true,
+  },
+  checkIndex: {
+    type: Boolean,
+    default: true,
+  },
+});
+
+// let a = `<a href='https://www.zhuba.cloud/'>zhuba.cloud</a>`;
 
 const tableRowClassName = ({
   row,
@@ -40,21 +98,25 @@ const tableData: User[] = [
     date: "2016-05-03",
     name: "Tom",
     address: "No. 189, Grove St, Los Angeles",
+    sex: "male",
   },
   {
     date: "2016-05-02",
     name: "Tom",
     address: "No. 189, Grove St, Los Angeles",
+    sex: "male",
   },
   {
     date: "2016-05-04",
     name: "Tom",
     address: "No. 189, Grove St, Los Angeles",
+    sex: "male",
   },
   {
     date: "2016-05-01",
     name: "Tom",
     address: "No. 189, Grove St, Los Angeles",
+    sex: "male",
   },
 ];
 </script>

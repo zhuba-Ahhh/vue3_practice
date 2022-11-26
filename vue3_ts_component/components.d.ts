@@ -10,6 +10,7 @@ declare module '@vue/runtime-core' {
     Button: typeof import('./src/components/Button/index.vue')['default']
     ElTable: typeof import('element-plus/es')['ElTable']
     ElTableColumn: typeof import('element-plus/es')['ElTableColumn']
+    'ElTableColumnvIf=': typeof import('element-plus/es')['ElTableColumnvIf=']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     Table: typeof import('./src/components/Table/index.vue')['default']
