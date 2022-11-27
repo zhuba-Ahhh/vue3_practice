@@ -8,6 +8,7 @@ export {}
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     Button: typeof import('./src/components/Button/index.vue')['default']
+    Cake: typeof import('./src/components/Control/Cake/index.vue')['default']
     Control: typeof import('./src/components/Control/index.vue')['default']
     ElButton: typeof import('element-plus/es')['ElButton']
     ElCheckbox: typeof import('element-plus/es')['ElCheckbox']

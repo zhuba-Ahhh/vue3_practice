@@ -1,0 +1,28 @@
+$radius: 200px;
+$angle: 120deg;
+$base_color: deeppink;
+$outer_color: #ededed;
+
+.cricle {
+  width: $radius;
+  height: $radius;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: conic-gradient($base_color $angle, $outer_color 0);
+  margin-left: 15px;
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: white;
+    width: $radius * 0.6;
+    height: $radius * 0.6;
+    border-radius: 50%;
+  }
+  span {
+    position: relative;
+    font-size: $radius * 0.125;
+    color: $base_color;
+  }
+}
