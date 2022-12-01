@@ -1,0 +1,15 @@
+lockfileVersion: 5.4
+
+specifiers:
+  cz-git: ^1.3.12
+
+devDependencies:
+  cz-git: registry.npmmirror.com/cz-git/1.3.12
+
+packages:
+
+  registry.npmmirror.com/cz-git/1.3.12:
+    resolution: {integrity: sha512-grTgbgjsRpvkYNjm8kmpvHHw/LkkS3SlQOOwgamhRZo7c5qQfts1QZdkJ6RP0K61BcxyH5siMz8qC/MDoW/tBA==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/cz-git/-/cz-git-1.3.12.tgz}
+    name: cz-git
+    version: 1.3.12
+    dev: true

@@ -6,8 +6,9 @@
 - \_success
 - \_warning
 - \_danger
-
 - \_round
-
-
 - \_disabled
+
+- \_switch
+- \_button
+- \_select
