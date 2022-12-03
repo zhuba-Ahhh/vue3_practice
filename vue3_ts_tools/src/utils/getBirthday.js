@@ -4,7 +4,7 @@
 
 import moment from "moment";
 
-function getBirthday(Day = "3-10") {
+export function getBirthday(Day = "3-10") {
   // 首先要获取到今年的生日
   let birthdayTime = moment().format("YYYY-") + Day; // Day:3-10
   // 通过时间戳  去判断当前的时间戳是否大于今年生日的时间戳
@@ -39,6 +39,5 @@ function timeToTimestamp(time) {
   // console.log(time + "的时间戳为：" + timestamp);
   return timestamp;
 }
-
 
 export default getBirthday;
