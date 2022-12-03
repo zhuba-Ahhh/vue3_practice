@@ -7,8 +7,8 @@
 </template>
 
 <script setup lang="ts">
-// import ScrollToTop from "@/utils/ScrollToTop.js";
-import ScrollToTop from "@/tools/ScrollToTop";
+// import ScrollToTop from "@/utils/scrollToTop.js";
+import ScrollToTop from "@/tools/scrollToTop";
 import { reactive } from "vue";
 let Top = reactive(["myBtn"]);
 </script>

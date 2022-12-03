@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import getBirthday from "@/components/getBirthday.vue";
-import ScrollToTop from "@/components/ScrollToTop.vue";
+import ScrollToTop from "@/components/scrollToTop.vue";
 </script>
 
 <template>
