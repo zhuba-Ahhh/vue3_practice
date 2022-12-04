@@ -26,3 +26,4 @@ let flag: boolean = isFunction(changeColorHex);
 </script>
 
 <style scoped></style>
+
