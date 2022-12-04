@@ -1,11 +1,13 @@
 <script setup lang="ts">
 import getBirthday from "@/components/getBirthday.vue";
-import ScrollToTop from "@/components/scrollToTop.vue";
+import scrollToTop from "@/components/scrollToTop.vue";
+import Test from "./components/Test.vue";
 </script>
 
 <template>
-  <div><getBirthday /></div>
-  <ScrollToTop />
+  <getBirthday />
+  <Test />
+  <scrollToTop />
 </template>
 
 <style scoped></style>

@@ -11,7 +11,7 @@ import { ref, onMounted, onUnmounted, watch } from "vue";
 // import getBirthday from "@/tools/getBirthday";
 import getBirthday from "@/utils/getBirthday.js";
 let day = ref("3-10");
-let Birthday = ref(getBirthday(day.value));
+let Birthday = ref(getBirthday(day.value) as string);
 let timer: number;
 watch(day, async (newVal, _oldVal) => {
   if (true) {
