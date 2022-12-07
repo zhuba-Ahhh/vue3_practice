@@ -53,7 +53,12 @@
             <div class="table-cell">
               <div class="input">
                 <img src="../assets/img/email.png" class="img" />
-                <input name="email" placeholder="Email" type="text" />
+                <input
+                  name="email"
+                  placeholder="Email"
+                  type="text"
+                  id="emailR"
+                />
               </div>
               <!-- <input name="fullName" placeholder="Full Name" type="text" /> -->
               <div class="input">
@@ -87,6 +92,7 @@
 import $ from "jquery";
 import axios from "axios";
 import TCaptcha from "../js/TCaptcha.js";
+import test from "../js/email.js";
 export default {
   components: {},
   props: {},
@@ -106,7 +112,7 @@ export default {
     },
     send(Way) {
       try {
-        let captcha = new TencentCaptcha("199884704", callback, {});
+        let captcha = new TencentCaptcha("196925390", callback, {});
         captcha.show();
       } catch (error) {
         loadErrorCallback();
@@ -131,23 +137,29 @@ export default {
       function axiosWay(Data, way) {
         let username;
         let passwd;
+        let email;
         if (way == "register") {
           username = $("#usernameR").val();
           passwd = $("#passwdR").val();
+          email = $("#emailR").val();
+          if (!test(email)) {
+            alert("Mailbox Format Error!");
+            return;
+          }
         } else {
           username = $("#usernameL").val();
           passwd = $("#passwdL").val();
         }
         if (username == "" && passwd == "") {
-          alert("username and password can not be empty!");
+          alert("Username and Password can not be empty!");
           return;
         }
         if (username == "" && passwd != "") {
-          alert("username can not be empty!");
+          alert("Username can not be empty!");
           return;
         }
         if (username != "" && passwd == "") {
-          alert("passwd can not be empty!");
+          alert("Passwd can not be empty!");
           return;
         }
         let url = "http://43.142.36.176:8080/" + way;
