@@ -1,0 +1,36 @@
+.base-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.body {
+  margin-top: 20px;
+  height: 90vh;
+  width: 90vw;
+  .base-flex;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  .ec-panel {
+    .base-flex;
+    color: aqua;
+    margin: 10px;
+    padding: 10px;
+    font-size: 1.2rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    border-radius: 20px;
+    position: relative;
+    height: 90vh;
+    flex: 0.5 1;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+    &.active {
+      flex: 5 1;
+    }
+  }
+}
