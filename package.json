@@ -1,9 +1,9 @@
 {
-	"devDependencies": {
-		"cz-git": "^1.3.12"
-	},
-	"scripts": {
-		"commit": "git cz"
+  "devDependencies": {
+    "cz-git": "^1.4.0"
+  },
+  "scripts": {
+    "commit": "git cz"
   },
   "config": {
     "commitizen": {

@@ -1,5 +1,5 @@
 <template>
-  <div class="body">
+  <div class="body2">
     <div class="container">
       <div class="progress-container">
         <div :style="progress" class="progress"></div>
@@ -22,7 +22,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, reactive } from "vue";
+import { ref, reactive, type Ref } from "vue";
 import { nanoid } from "nanoid";
 import "./index.less";
 
@@ -34,12 +34,12 @@ const list = reactive([
   ]),
   prev = reactive(["prev", "disabled"]),
   next = reactive(["next", "active"]),
-  progress = ref("");
-const currentActive = ref(0);
-const min = 0,
-  max = list.length - 1;
+  progress: Ref<string> = ref("");
+const currentActive: Ref<number> = ref(0);
+const min: number = 0,
+  max: number = list.length - 1;
 
-const changeNext = () => {
+const changeNext = (): void => {
   if (next[1] === "disabled") return;
   if (currentActive.value >= max - 1) {
     // currentActive = min;
@@ -67,7 +67,7 @@ const changePrev = () => {
   }
   update();
 };
-const update = () => {
+const update = (): void => {
   list.forEach((item, index) => {
     if (index <= currentActive.value) {
       item[1] = "active";
@@ -75,7 +75,7 @@ const update = () => {
       item.length = 1;
     }
   });
-  let width = ((100 / max) * currentActive.value).toFixed(4) + "%";
+  let width: string = ((100 / max) * currentActive.value).toFixed(4) + "%";
   progress.value = `width:${width}`;
 };
 </script>
