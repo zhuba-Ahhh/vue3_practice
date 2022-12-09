@@ -11,6 +11,8 @@ import Top from "@/components/Top/index.vue";
       <RouterLink to="/t1">T1</RouterLink>
       <RouterLink to="/t2">T2</RouterLink>
       <RouterLink to="/t3">T3</RouterLink>
+      <RouterLink to="/t4">T4</RouterLink>
+      <RouterLink to="/t5">T5</RouterLink>
     </nav>
   </header>
 

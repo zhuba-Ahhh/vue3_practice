@@ -1,5 +1,6 @@
 <template>
   <div class="body1">
+    <h2 class="title">Expansion Cards 拓展卡片</h2>
     <div
       class="ec-panel"
       v-for="(item, index) in imageItems"

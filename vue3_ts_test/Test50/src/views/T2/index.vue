@@ -1,5 +1,6 @@
 <template>
   <div class="body2">
+    <h2 class="title">Article Steps 步骤条</h2>
     <div class="container">
       <div class="progress-container">
         <div :style="progress" class="progress"></div>

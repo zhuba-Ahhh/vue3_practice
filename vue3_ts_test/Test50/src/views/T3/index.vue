@@ -1,5 +1,6 @@
 <template>
   <div class="body3">
+    <h2 class="title">The Hide Search Widget 隐藏搜索小组件</h2>
     <div :class="searchContainer">
       <input
         type="text"
