@@ -1,7 +1,13 @@
-import { Server } from 'socket.io'
-import { socketServer } from './model/socket.js'
+import {
+  Server
+} from 'socket.io'
+import {
+  socketServer
+} from './model/socket.js'
 // 开启cors跨域
-const io = new Server(5432, { cors: true })
+const io = new Server(5432, {
+  cors: true
+})
 
 socketServer(io)
 // io.on('connection', socket => {

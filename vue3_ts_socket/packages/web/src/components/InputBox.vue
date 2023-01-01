@@ -1,22 +1,22 @@
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed } from "vue";
 interface Props {
-  modelValue: string
+  modelValue: string;
 }
-const props = defineProps<Props>()
-const emits = defineEmits(['update:modelValue', 'send'])
+const props = defineProps<Props>();
+const emits = defineEmits(["update:modelValue", "send"]);
 
 const value = computed({
   get() {
-    return props.modelValue
+    return props.modelValue;
   },
   set(v) {
-    emits('update:modelValue', v)
+    emits("update:modelValue", v);
   },
-})
+});
 const handleSend = () => {
-  emits('send', value.value)
-}
+  emits("send", value.value);
+};
 </script>
 <template>
   <div class="form-control mt-4">

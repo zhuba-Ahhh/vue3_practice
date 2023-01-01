@@ -1,26 +1,26 @@
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed } from "vue";
 
 interface Props {
-  groupName: string
-  personNumber: number
-  userList: Map<any, any>
-  curUserId: string
+  groupName: string;
+  personNumber: number;
+  userList: Map<any, any>;
+  curUserId: string;
 }
 interface User {
-  id: string
-  avatar: string
-  name: string
-  new: boolean
+  id: string;
+  avatar: string;
+  name: string;
+  new: boolean;
 }
-const props = defineProps<Props>()
-const emit = defineEmits(['more'])
+const props = defineProps<Props>();
+const emit = defineEmits(["more"]);
 const handleMore = (user: User) => {
-  emit('more', user)
-}
+  emit("more", user);
+};
 const users = computed<User[]>(() => {
-  const list: User[] = []
-  if (props.userList.size === 0) return []
+  const list: User[] = [];
+  if (props.userList.size === 0) return [];
   props.userList.forEach((value, key) => {
     if (key !== props.curUserId) {
       list.push({
@@ -28,11 +28,11 @@ const users = computed<User[]>(() => {
         id: key,
         name: value.name,
         new: value.new,
-      })
+      });
     }
-  })
-  return list
-})
+  });
+  return list;
+});
 </script>
 
 <template>

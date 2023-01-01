@@ -1,24 +1,24 @@
 <script setup lang="ts">
 export interface ChatDataItem {
-  type: 'your' | 'me' | 'tips'
-  id: string
-  name?: string
-  content: string
-  avatar?: string
-  userId?: string
+  type: "your" | "me" | "tips";
+  id: string;
+  name?: string;
+  content: string;
+  avatar?: string;
+  userId?: string;
 }
 interface Props {
-  chatData: ChatDataItem[]
+  chatData: ChatDataItem[];
 }
-const props = defineProps<Props>()
-const emits = defineEmits(['click-user'])
+const props = defineProps<Props>();
+const emits = defineEmits(["click-user"]);
 const handleClickAvatar = (e: ChatDataItem) => {
-  emits('click-user', {
+  emits("click-user", {
     name: e.name,
     id: e.userId,
     avatar: e.avatar,
-  })
-}
+  });
+};
 </script>
 <template>
   <div

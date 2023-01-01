@@ -5,7 +5,9 @@ export const socketServer = io => {
     socket.on('join', e => {
       userList.set(socket.id, e)
       // 加入成功后返回加入成功的事件
-      socket.emit('joined', Object.assign({}, e, { id: socket.id }))
+      socket.emit('joined', Object.assign({}, e, {
+        id: socket.id
+      }))
       const uList = [...userList.entries()]
       // 触发广播
       socket.broadcast.emit('welcome', {

@@ -1,27 +1,27 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue'
+import { computed, ref } from "vue";
 
 interface Props {
-  modelValue: boolean
+  modelValue: boolean;
 }
-const props = defineProps<Props>()
-const emit = defineEmits(['update:modelValue'])
-const aniShow = ref(false)
+const props = defineProps<Props>();
+const emit = defineEmits(["update:modelValue"]);
+const aniShow = ref(false);
 const show = computed({
   get() {
-    aniShow.value = props.modelValue
-    return props.modelValue
+    aniShow.value = props.modelValue;
+    return props.modelValue;
   },
   set(v) {
-    emitUpdate(v)
+    emitUpdate(v);
   },
-})
+});
 const emitUpdate = (v: boolean, time = 300) => {
-  aniShow.value = v
+  aniShow.value = v;
   window.setTimeout(() => {
-    emit('update:modelValue', v)
-  }, time)
-}
+    emit("update:modelValue", v);
+  }, time);
+};
 </script>
 <template>
   <div class="ywz-drawer h-screen w-screen fixed z-10 top-0" v-show="show">

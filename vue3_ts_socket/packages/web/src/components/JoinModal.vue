@@ -1,34 +1,34 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-import avatarList from './../assets/avatar'
+import { ref } from "vue";
+import avatarList from "./../assets/avatar";
 export interface JoinEvent {
-  name: string
-  avatar: string
+  name: string;
+  avatar: string;
 }
-const aList = [...avatarList]
+const aList = [...avatarList];
 const emits = defineEmits({
   // 校验 join 事件
   join: (e: JoinEvent) => {
-    const { name, avatar } = e
+    const { name, avatar } = e;
     if (name && avatar) {
-      return true
+      return true;
     } else {
-      console.warn('未输入名字~')
-      return false
+      console.warn("未输入名字~");
+      return false;
     }
   },
-})
+});
 
-const name = ref('')
-const isOpen = ref(true)
+const name = ref("");
+const isOpen = ref(true);
 const handleJoin = () => {
   // 随机头像
-  const randomIndex = Math.floor(Math.random() * aList.length)
-  const avatar = aList[randomIndex]
+  const randomIndex = Math.floor(Math.random() * aList.length);
+  const avatar = aList[randomIndex];
 
-  emits('join', { name: name.value, avatar })
-  isOpen.value = false
-}
+  emits("join", { name: name.value, avatar });
+  isOpen.value = false;
+};
 </script>
 <template>
   <div :class="['modal', isOpen ? 'modal-open' : '']">
