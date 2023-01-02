@@ -34,6 +34,26 @@ const router = createRouter({
       name: "time",
       component: () => import("@/views/TimeView.vue"),
     },
+    {
+      path: "/curd",
+      name: "curd",
+      component: () => import("@/views/CURDView.vue"),
+    },
+    {
+      path: "/markdown",
+      name: "markdown",
+      component: () => import("@/views/markdownView.vue"),
+    },
+    {
+      path: "/github",
+      name: "github",
+      component: () => import("@/views/GitHubView.vue"),
+    },
+    {
+      path: "/base",
+      name: "base",
+      component: () => import("@/views/BaseView.vue"),
+    },
   ],
 });
 

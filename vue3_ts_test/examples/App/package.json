@@ -10,10 +10,14 @@
     "type-check": "vue-tsc --noEmit"
   },
   "dependencies": {
+    "lodash-es": "^4.17.21",
+    "marked": "^4.2.5",
     "vue": "^3.2.45",
     "vue-router": "^4.1.6"
   },
   "devDependencies": {
+    "@types/lodash-es": "^4.17.6",
+    "@types/marked": "^4.0.8",
     "@types/node": "^18.11.12",
     "@vitejs/plugin-vue": "^4.0.0",
     "@vue/tsconfig": "^0.1.3",

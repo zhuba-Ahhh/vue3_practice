@@ -23,6 +23,11 @@ import HelloWorld from "./components/HelloWorld.vue";
         <router-link to="/temperature">Temperature</router-link>
         <router-link to="/book">Book</router-link>
         <router-link to="/time">Time</router-link>
+        <router-link to="/curd">CURD</router-link>
+        <router-link to="/markdown">MarkDown</router-link>
+        <router-link to="/github">GitHub</router-link>
+        <router-link to="/grid">Grid</router-link>
+        <router-link to="/base">Base</router-link>
       </nav>
     </div>
   </header>
