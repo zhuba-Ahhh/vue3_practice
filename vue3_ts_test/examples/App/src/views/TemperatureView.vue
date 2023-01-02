@@ -7,14 +7,14 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
-const c = ref(0),
-  f = ref(32);
+const c = ref<number>(0),
+  f = ref<number>(32);
 
-const changC = (e: any, v = +e.target.value) => {
+const changC = (e: Event, v = +(e.target as HTMLInputElement).value) => {
   c.value = v;
   f.value = v * (9 / 5) + 32;
 };
-const changF = (e: any, v = +e.target.value) => {
+const changF = (e: Event, v = +(e.target as HTMLInputElement).value) => {
   f.value = v;
   c.value = (v - 32) * (5 / 9);
 };

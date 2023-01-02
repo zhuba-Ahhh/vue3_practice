@@ -22,7 +22,17 @@ const router = createRouter({
     {
       path: "/temperature",
       name: "temperature",
-      component: () => import("@/views/Temperature.vue"),
+      component: () => import("@/views/TemperatureView.vue"),
+    },
+    {
+      path: "/book",
+      name: "book",
+      component: () => import("@/views/BookView.vue"),
+    },
+    {
+      path: "/time",
+      name: "time",
+      component: () => import("@/views/TimeView.vue"),
     },
   ],
 });
