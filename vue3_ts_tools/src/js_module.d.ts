@@ -5,3 +5,5 @@ declare module "@/utils/scrollToTop.js";
 declare module "@/utils/changeColor.js";
 declare module "@/utils/isFunction.js";
 declare module "@/utils/regularityCheck.js";
+declare module "@/utils/cashStamp.js";
+declare module "@/utils/digitalToChinese.js";
